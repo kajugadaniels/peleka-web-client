@@ -1500,7 +1500,7 @@ video {
 }.border-b-borderColour{
   --tw-border-opacity: 1;
   border-bottom-color: rgb(237 240 230 / var(--tw-border-opacity));
-}.bg-\[\#075985\]{
+}.bg-\[\#219653\]{
   --tw-bg-opacity: 1;
   background-color: rgb(33 150 83 / var(--tw-bg-opacity));
 }.bg-\[\#D9D9D900\]{
@@ -1561,7 +1561,7 @@ video {
   --tw-gradient-to: rgb(243 253 217 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }.from-primary{
-  --tw-gradient-from: #075985 var(--tw-gradient-from-position);
+  --tw-gradient-from: #B1E346 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(177 227 70 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }.from-transparent{
@@ -1597,8 +1597,8 @@ video {
   background-position: center;
 }.bg-no-repeat{
   background-repeat: no-repeat;
-}.fill-\[\#075985\]{
-  fill: #075985;
+}.fill-\[\#219653\]{
+  fill: #219653;
 }.fill-\[\#D8DBD0\]{
   fill: #D8DBD0;
 }.fill-\[\#E6FFB1\]{
@@ -1610,7 +1610,7 @@ video {
 }.fill-paragraph{
   fill: #18181B;
 }.fill-primary{
-  fill: #075985;
+  fill: #B1E346;
 }.fill-primary-200{
   fill: #C4F241;
 }.fill-transparent{
@@ -2293,7 +2293,7 @@ body{overflow-x:hidden;max-width:100vw}html{
 .faq-body.open{
   display: block;
 }.social-link li a:hover svg path{
-  fill: #075985;
+  fill: #B1E346;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;
@@ -3018,7 +3018,7 @@ body{overflow-x:hidden;max-width:100vw}html{
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 .hover\:fill-primary:hover{
-  fill: #075985;
+  fill: #B1E346;
 }
 .hover\:text-paragraph:hover{
   --tw-text-opacity: 1;
@@ -3081,7 +3081,7 @@ body{overflow-x:hidden;max-width:100vw}html{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .group:hover .group-hover\:fill-primary{
-  fill: #075985;
+  fill: #B1E346;
 }
 .group:hover .group-hover\:opacity-100{
   opacity: 1;
@@ -4116,7 +4116,7 @@ body{overflow-x:hidden;max-width:100vw}html{
   fill: #DCE0D3;
 }
 :is(:where(.dark) .dark\:fill-primary){
-  fill: #075985;
+  fill: #B1E346;
 }
 :is(:where(.dark) .dark\:fill-primary-200){
   fill: #C4F241;
@@ -4128,7 +4128,7 @@ body{overflow-x:hidden;max-width:100vw}html{
   stroke: #464745;
 }
 :is(:where(.dark) .dark\:stroke-primary){
-  stroke: #075985;
+  stroke: #B1E346;
 }
 :is(:where(.dark) .dark\:\!text-paragraph){
   --tw-text-opacity: 1 !important;
@@ -4296,7 +4296,7 @@ body{overflow-x:hidden;max-width:100vw}html{
   background-color: rgb(177 227 70 / var(--tw-bg-opacity));
 }
 :is(:where(.dark) .dark\:hover\:fill-primary:hover){
-  fill: #075985;
+  fill: #B1E346;
 }
 :is(:where(.dark) .dark\:hover\:text-paragraph:hover){
   --tw-text-opacity: 1;
