@@ -1,11 +1,46 @@
-import React from 'react'
-import { LogoLight } from '../assets/img'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react';
+import { LogoLight } from '../assets/img';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const e = window.pageYOffset;
+            const mainNavBar = document.getElementById("mainnavigationBar");
+            const topNav = document.getElementById("top-nav");
+
+            if (e >= 100) {
+                mainNavBar.classList.add("nav-sticky");
+                if (topNav) {
+                    topNav.classList.add("scale-y-0", "origin-top");
+                    topNav.classList.remove("scale-y-100");
+                }
+            } else {
+                mainNavBar.classList.remove("nav-sticky");
+                if (topNav) {
+                    topNav.classList.remove("scale-y-0", "origin-top");
+                    topNav.classList.add("scale-y-100", "origin-top");
+                }
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        // Cleanup function to remove the event listener
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
+    const toggleMobileMenu = () => {
+        setIsMobileMenuOpen(!isMobileMenuOpen);
+    };
+
     return (
         <header
-            className="fixed left-0 top-15 z-[1000000000] duration-500  transition-all w-full bg-transparent"
+            className="fixed left-0 top-15 z-[1000000000] duration-500 transition-all w-full bg-transparent"
             id="mainnavigationBar"
         >
             <nav className="container flex relative items-center">
@@ -24,12 +59,12 @@ const Navbar = () => {
                         />
                     </Link>
                 </div>
-                <ul className="nav-list hidden lg:flex lg:ml-7 xl:ml-15  [&>*:not(:last-child)]:me-1">
+                <ul className="nav-list hidden lg:flex lg:ml-7 xl:ml-15 [&>*:not(:last-child)]:me-1">
                     <li>
                         <Link
                             to="/"
                             className="font-Inter flex items-center text-base font-medium leading-8 text-paragraph dark:text-white py-[5px] px-5 lg:px-4 xl:px-5 border rounded-large border-transparent hover:bg-white hover:border-borderColour dark:hover:bg-dark-200 
-                            dark:hover:border-borderColour/10 duration-500 hover:duration-500 transition-colors "
+                            dark:hover:border-borderColour/10 duration-500 hover:duration-500 transition-colors"
                         >
                             Home
                         </Link>
@@ -38,7 +73,7 @@ const Navbar = () => {
                         <Link
                             to="/about"
                             className="font-Inter flex items-center text-base font-medium leading-8 text-paragraph dark:text-white py-[5px] px-5 lg:px-4 xl:px-5 border rounded-large border-transparent hover:bg-white hover:border-borderColour dark:hover:bg-dark-200 
-                            dark:hover:border-borderColour/10 duration-500 hover:duration-500 transition-colors "
+                            dark:hover:border-borderColour/10 duration-500 hover:duration-500 transition-colors"
                         >
                             About
                         </Link>
@@ -47,7 +82,7 @@ const Navbar = () => {
                         <Link
                             to="/services"
                             className="font-Inter flex items-center text-base font-medium leading-8 text-paragraph dark:text-white py-[5px] px-5 lg:px-4 xl:px-5 border rounded-large border-transparent hover:bg-white hover:border-borderColour dark:hover:bg-dark-200 
-                            dark:hover:border-borderColour/10 duration-500 hover:duration-500 transition-colors "
+                            dark:hover:border-borderColour/10 duration-500 hover:duration-500 transition-colors"
                         >
                             Services
                         </Link>
@@ -56,16 +91,16 @@ const Navbar = () => {
                         <Link
                             to="/contact"
                             className="font-Inter flex items-center text-base font-medium leading-8 text-paragraph dark:text-white py-[5px] px-5 lg:px-4 xl:px-5 border rounded-large border-transparent hover:bg-white hover:border-borderColour dark:hover:bg-dark-200 
-                            dark:hover:border-borderColour/10 duration-500 hover:duration-500 transition-colors  "
+                            dark:hover:border-borderColour/10 duration-500 hover:duration-500 transition-colors"
                         >
                             Contact Us
                         </Link>
                     </li>
                 </ul>
-                <ul className="flex items-center ml-auto  [&>*:not(:last-child)]:me-2.5">
+                <ul className="flex items-center ml-auto [&>*:not(:last-child)]:me-2.5">
                     <li className="">
                         <button
-                            className="bg-white dark:bg-dark-200 p-2.5 rounded-full "
+                            className="bg-white dark:bg-dark-200 p-2.5 rounded-full"
                             id="open-btn"
                         >
                             <svg
@@ -76,8 +111,8 @@ const Navbar = () => {
                                 xmlns="http://www.w3.org/2000/svg"
                             >
                                 <path
-                                    fill-rule="evenodd"
-                                    clip-rule="evenodd"
+                                    fillRule="evenodd"
+                                    clipRule="evenodd"
                                     d="M9.11278 0C14.1369 0 18.2245 4.08758 18.2245 9.11278C18.2245 11.2861 17.4592 13.5472 16.1845 14.8512L20 18.6667L18.6667 20L14.8512 16.1856C13.5667 17.4603 11.2861 18.2245 9.11278 18.2245C4.08758 18.2245 0 14.1369 0 9.11278C0 4.08758 4.08758 0 9.11278 0ZM9.11278 16.3395C13.0974 16.3395 16.3395 13.0974 16.3395 9.11278C16.3395 5.12818 13.0974 1.88608 9.11278 1.88608C5.12709 1.88608 1.88499 5.12818 1.88499 9.11278C1.88499 13.0974 5.12709 16.3395 9.11278 16.3395Z"
                                     fill=""
                                     className="fill-paragraph dark:fill-white"
@@ -93,8 +128,11 @@ const Navbar = () => {
                             Request Demo
                         </Link>
                     </li>
-                    <li className="max-lg:inline-block lg:hidden ">
-                        <button className="outline-none mobile-menu-button w-10 h-10 rounded-full bg-white dark:bg-dark-200 relative ">
+                    <li className="max-lg:inline-block lg:hidden">
+                        <button 
+                            className="outline-none mobile-menu-button w-10 h-10 rounded-full bg-white dark:bg-dark-200 relative"
+                            onClick={toggleMobileMenu}
+                        >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="22"
@@ -122,9 +160,10 @@ const Navbar = () => {
                         </button>
                     </li>
                 </ul>
-                <div className="mobile-menu max-lg:overflow-y-auto">
+                <div className={`mobile-menu max-lg:overflow-y-auto ${isMobileMenuOpen ? 'open' : 'hidden'}`}>
                     <button
-                        className=" outline-none navbar-toggle-close  w-10 h-10 rounded-full bg-white dark:bg-dark-200 absolute right-6 top-5 "
+                        className="outline-none navbar-toggle-close w-10 h-10 rounded-full bg-white dark:bg-dark-200 absolute right-6 top-5"
+                        onClick={toggleMobileMenu}
                     >
                         <i className="fa-solid fa-times"></i>
                     </button>
@@ -133,7 +172,7 @@ const Navbar = () => {
                             <Link
                                 to="/"
                                 className="font-Inter flex items-center text-base font-medium leading-8 text-paragraph dark:text-white py-[5px] px-5 lg:px-4 xl:px-5 border rounded-large border-transparent hover:bg-white hover:border-borderColour dark:hover:bg-dark-200 
-                                dark:hover:border-borderColour/10 duration-500 hover:duration-500 transition-colors "
+                                dark:hover:border-borderColour/10 duration-500 hover:duration-500 transition-colors"
                             >
                                 Home
                             </Link>
@@ -142,7 +181,7 @@ const Navbar = () => {
                             <Link
                                 to="/about"
                                 className="font-Inter flex items-center text-base font-medium leading-8 text-paragraph dark:text-white py-[5px] px-5 lg:px-4 xl:px-5 border rounded-large border-transparent hover:bg-white hover:border-borderColour dark:hover:bg-dark-200 
-                                dark:hover:border-borderColour/10 duration-500 hover:duration-500 transition-colors "
+                                dark:hover:border-borderColour/10 duration-500 hover:duration-500 transition-colors"
                             >
                                 About
                             </Link>
@@ -151,19 +190,20 @@ const Navbar = () => {
                             <Link
                                 to="/services"
                                 className="font-Inter flex items-center text-base font-medium leading-8 text-paragraph dark:text-white py-[5px] px-5 lg:px-4 xl:px-5 border rounded-large border-transparent hover:bg-white hover:border-borderColour dark:hover:bg-dark-200 
-                                dark:hover:border-borderColour/10 duration-500 hover:duration-500 transition-colors "
+                                dark:hover:border-borderColour/10 duration-500 hover:duration-500 transition-colors"
                             >
                                 Services
                             </Link>
                         </li>
                         <li>
                             <Link
-                                to="/contact" className="font-Inter flex items-center text-base font-medium leading-8 text-paragraph dark:text-white py-[5px] px-5 lg:px-4 xl:px-5 border rounded-large border-transparent hover:bg-white hover:border-borderColour dark:hover:bg-dark-200 dark:hover:border-borderColour/10 duration-500 hover:duration-500 transition-colors"
+                                to="/contact"
+                                className="font-Inter flex items-center text-base font-medium leading-8 text-paragraph dark:text-white py-[5px] px-5 lg:px-4 xl:px-5 border rounded-large border-transparent hover:bg-white hover:border-borderColour dark:hover:bg-dark-200 
+                                dark:hover:border-borderColour/10 duration-500 hover:duration-500 transition-colors"
                             >
                                 Contact Us
                             </Link>
                         </li>
-
                         <li>
                             <Link
                                 to="/request-demo"
