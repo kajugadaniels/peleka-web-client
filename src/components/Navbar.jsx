@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { LogoLight } from '../assets/img';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const location = useLocation();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -28,7 +29,6 @@ const Navbar = () => {
 
         window.addEventListener("scroll", handleScroll);
 
-        // Cleanup function to remove the event listener
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
@@ -36,6 +36,12 @@ const Navbar = () => {
 
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
+    };
+
+    const getLinkClass = (path) => {
+        const baseClass = "font-Inter flex items-center text-base font-medium leading-8 text-paragraph dark:text-white py-[5px] px-5 lg:px-4 xl:px-5 border rounded-large border-transparent hover:bg-white hover:border-borderColour dark:hover:bg-dark-200 dark:hover:border-borderColour/10 duration-500 hover:duration-500 transition-colors";
+        const isActive = location.pathname === path;
+        return isActive ? `${baseClass} active bg-white border-borderColour dark:bg-dark-200 dark:border-borderColour/10` : baseClass;
     };
 
     return (
@@ -63,8 +69,7 @@ const Navbar = () => {
                     <li>
                         <Link
                             to="/"
-                            className="font-Inter flex items-center text-base font-medium leading-8 text-paragraph dark:text-white py-[5px] px-5 lg:px-4 xl:px-5 border rounded-large border-transparent hover:bg-white hover:border-borderColour dark:hover:bg-dark-200 
-                            dark:hover:border-borderColour/10 duration-500 hover:duration-500 transition-colors"
+                            className={getLinkClass('/')}
                         >
                             Home
                         </Link>
@@ -72,8 +77,7 @@ const Navbar = () => {
                     <li>
                         <Link
                             to="/about"
-                            className="font-Inter flex items-center text-base font-medium leading-8 text-paragraph dark:text-white py-[5px] px-5 lg:px-4 xl:px-5 border rounded-large border-transparent hover:bg-white hover:border-borderColour dark:hover:bg-dark-200 
-                            dark:hover:border-borderColour/10 duration-500 hover:duration-500 transition-colors"
+                            className={getLinkClass('/about')}
                         >
                             About
                         </Link>
@@ -81,8 +85,7 @@ const Navbar = () => {
                     <li>
                         <Link
                             to="/services"
-                            className="font-Inter flex items-center text-base font-medium leading-8 text-paragraph dark:text-white py-[5px] px-5 lg:px-4 xl:px-5 border rounded-large border-transparent hover:bg-white hover:border-borderColour dark:hover:bg-dark-200 
-                            dark:hover:border-borderColour/10 duration-500 hover:duration-500 transition-colors"
+                            className={getLinkClass('/services')}
                         >
                             Services
                         </Link>
@@ -90,8 +93,7 @@ const Navbar = () => {
                     <li>
                         <Link
                             to="/contact"
-                            className="font-Inter flex items-center text-base font-medium leading-8 text-paragraph dark:text-white py-[5px] px-5 lg:px-4 xl:px-5 border rounded-large border-transparent hover:bg-white hover:border-borderColour dark:hover:bg-dark-200 
-                            dark:hover:border-borderColour/10 duration-500 hover:duration-500 transition-colors"
+                            className={getLinkClass('/contact')}
                         >
                             Contact Us
                         </Link>
@@ -122,8 +124,8 @@ const Navbar = () => {
                     </li>
                     <li className="max-lg:hidden">
                         <Link
-                            to="request-demo"
-                            className="btn btn-navbar btn-sm"
+                            to="/request-demo"
+                            className={`btn btn-navbar btn-sm ${location.pathname === '/request-demo' ? 'active' : ''}`}
                         >
                             Request Demo
                         </Link>
@@ -171,8 +173,7 @@ const Navbar = () => {
                         <li>
                             <Link
                                 to="/"
-                                className="font-Inter flex items-center text-base font-medium leading-8 text-paragraph dark:text-white py-[5px] px-5 lg:px-4 xl:px-5 border rounded-large border-transparent hover:bg-white hover:border-borderColour dark:hover:bg-dark-200 
-                                dark:hover:border-borderColour/10 duration-500 hover:duration-500 transition-colors"
+                                className={getLinkClass('/')}
                             >
                                 Home
                             </Link>
@@ -180,8 +181,7 @@ const Navbar = () => {
                         <li>
                             <Link
                                 to="/about"
-                                className="font-Inter flex items-center text-base font-medium leading-8 text-paragraph dark:text-white py-[5px] px-5 lg:px-4 xl:px-5 border rounded-large border-transparent hover:bg-white hover:border-borderColour dark:hover:bg-dark-200 
-                                dark:hover:border-borderColour/10 duration-500 hover:duration-500 transition-colors"
+                                className={getLinkClass('/about')}
                             >
                                 About
                             </Link>
@@ -189,8 +189,7 @@ const Navbar = () => {
                         <li>
                             <Link
                                 to="/services"
-                                className="font-Inter flex items-center text-base font-medium leading-8 text-paragraph dark:text-white py-[5px] px-5 lg:px-4 xl:px-5 border rounded-large border-transparent hover:bg-white hover:border-borderColour dark:hover:bg-dark-200 
-                                dark:hover:border-borderColour/10 duration-500 hover:duration-500 transition-colors"
+                                className={getLinkClass('/services')}
                             >
                                 Services
                             </Link>
@@ -198,25 +197,16 @@ const Navbar = () => {
                         <li>
                             <Link
                                 to="/contact"
-                                className="font-Inter flex items-center text-base font-medium leading-8 text-paragraph dark:text-white py-[5px] px-5 lg:px-4 xl:px-5 border rounded-large border-transparent hover:bg-white hover:border-borderColour dark:hover:bg-dark-200 
-                                dark:hover:border-borderColour/10 duration-500 hover:duration-500 transition-colors"
+                                className={getLinkClass('/contact')}
                             >
                                 Contact Us
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                to="/request-demo"
-                                className="btn btn-navbar btn-sm"
-                            >
-                                Request Demo
                             </Link>
                         </li>
                     </ul>
                 </div>
             </nav>
         </header>
-    )
-}
+    );
+};
 
-export default Navbar
+export default Navbar;
