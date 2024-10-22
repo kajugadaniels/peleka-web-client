@@ -1,5 +1,6 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
+import { Navbar } from '../components'
 
 const UserLayout = () => {
     return (
@@ -42,7 +43,7 @@ const UserLayout = () => {
                     Until recently, the prevailing view assumed
                 </p>
             </div>
-            UserLayout
+            <Navbar />
             <Outlet />
         </div>
     )
