@@ -8,6 +8,54 @@ const Home = () => {
         AOS.init(); // Initialize AOS
     }, []);
 
+    const clientLogos = [
+        {
+            id: 1,
+            image: "https://aplio.vercel.app/images/clients/axeptio.svg",
+            alt: "axeptio"
+        },
+        {
+            id: 2,
+            image: "https://aplio.vercel.app/images/clients/axeptio.svg",
+            alt: "client 2"
+        },
+        {
+            id: 3,
+            image: "https://aplio.vercel.app/images/clients/axeptio.svg",
+            alt: "client 3"
+        },
+        {
+            id: 4,
+            image: "https://aplio.vercel.app/images/clients/axeptio.svg",
+            alt: "client 4"
+        },
+        {
+            id: 5,
+            image: "https://aplio.vercel.app/images/clients/axeptio.svg",
+            alt: "client 5"
+        },
+        {
+            id: 6,
+            image: "https://aplio.vercel.app/images/clients/axeptio.svg",
+            alt: "client 6"
+        },
+        {
+            id: 7,
+            image: "https://aplio.vercel.app/images/clients/axeptio.svg",
+            alt: "client 7"
+        },
+        {
+            id: 8,
+            image: "https://aplio.vercel.app/images/clients/axeptio.svg",
+            alt: "client 8"
+        },
+        {
+            id: 9,
+            image: "https://aplio.vercel.app/images/clients/axeptio.svg",
+            alt: "client 9"
+        }
+    ];
+
     return (
         <>
             <Hero />
@@ -590,6 +638,57 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
+            </section>
+
+            <section className="client bg-white dark:bg-dark-300">
+                <div className="container overflow-hidden max-lg:!px-0">
+                    <div className="relative after:absolute before:absolute after:w-[120px] after:h-[40px] after:bg-gradient-to-r after:from-white after:from-[37.5%]  after:top-1/2 after:-translate-y-1/2 after:left-0 after:z-10 before:w-[120px] before:h-[40px] before:bg-gradient-to-l before:from-white before:from-[37.5%] before:right-0  before:top-1/2 before:-translate-y-1/2  before:z-10 dark:after:from-dark-gradient dark:before:from-dark-gradient">
+                        <div className="absolute left-0 -top-[1px] w-full max-lg:hidden">
+                            <img
+                                src="https://aplio.vercel.app/images/clients/client-border.svg"
+                                alt="border"
+                                className="inline-block dark:hidden"
+                            />
+                        </div>
+                        <div className="marquee overflow-hidden whitespace-nowrap">
+                            {/* First set of logos */}
+                            <div className="marquee-content inline-flex items-center justify-between py-8 animate-marquee">
+                                {clientLogos.map((client) => (
+                                    <div key={client.id} className="marquee-content-list">
+                                        <img
+                                            src={client.image}
+                                            alt={client.alt}
+                                            className="inline-block dark:hidden"
+                                        />
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <style jsx global>{`
+                    .marquee {
+                        width: 100%;
+                    }
+                    
+                    .marquee-content {
+                        min-width: 100%;
+                    }
+
+                    @keyframes marquee {
+                        0% {
+                            transform: translateX(0);
+                        }
+                        100% {
+                            transform: translateX(-100%);
+                        }
+                    }
+
+                    .animate-marquee {
+                        animation: marquee 25s linear infinite;
+                    }
+                `}</style>
             </section>
         </>
     )
