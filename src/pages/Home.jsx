@@ -211,6 +211,386 @@ const Home = () => {
                 </div>
             </section>
 
+            <section className="bg-white dark:bg-dark-300 pt-150 mb-150 max-md:mb-25 relative overflow-hidden">
+                <div className="container ">
+                    <div className="mb-12 text-center max-w-[475px] mx-auto relative z-10">
+                        <div className="">
+                            <p className="section-tagline">Our Pricing</p>
+                            <h2>Choose the right plan for you</h2>
+                        </div>
+                    </div>
+
+                    <div className="relative md:z-10">
+                        <div className="absolute left-1/2 top-150 -translate-x-1/2 -translate-y-1/2 flex max-md:flex-col -z-10 max-md:hidden">
+                            <div
+                                className="max-1xl:w-[335px] max-1xl:h-[335px]  1xl:w-[442px] 1xl:h-[442px]  rounded-full bg-primary-200/20 blur-[145px]"
+                            ></div>
+                            <div
+                                className="max-1xl:w-[335px] max-1xl:h-[335px]  1xl:w-[442px] 1xl:h-[442px]  rounded-full bg-primary-200/25 -ml-[170px] max-md:ml-0 blur-[145px]"
+                            ></div>
+                            <div
+                                className="max-1xl:w-[335px] max-1xl:h-[335px]  1xl:w-[442px] 1xl:h-[442px]  rounded-full bg-primary-200/20 -ml-[170px] max-md:ml-0 blur-[145px]"
+                            ></div>
+                        </div>
+                        <div
+                            className="absolute left-1/2 p-[350px] top-25 -translate-x-1/2 -translate-y-1/2 bg-[url('https://aplio.vercel.app/images/price-gradient.png')] bg-no-repeat bg-center bg-contain opacity-70 md:hidden"
+                        ></div>
+                        <div className="flex max-lg:flex-col items-center gap-8 relative max-md:z-10 pb-12">
+                            <div className="bg-white dark:bg-dark-200 shadow-box rounded-medium p-2.5 ">
+                                <div className="border border-dashed rounded border-gray-100 dark:border-borderColour-dark p-8 max-md:p-5">
+                                    <h3 className="mb-2">Basic</h3>
+                                    <p className="mb-6">The prevailing view assumed lorem ipsum was born as a nonsense text.</p>
+                                    <div className="price-month mb-16">
+                                        <h2>$<span>19.00</span></h2>
+                                        <p>Per Month</p>
+                                    </div>
+
+                                    <ul
+                                        className=" relative after:absolute after:-top-12 after:h-0.5 after:w-full after:bg-[url('https://aplio.vercel.app/images/banking/border.svg')] dark:after:bg-[url('../images/banking/border-dark.svg')] after:bg-center after:bg-no-repeat after:bg-full"
+                                    >
+                                        <li className="mb-6 flex items-center gap-3.5">
+                                            <svg
+                                                width="20"
+                                                height="20"
+                                                viewBox="0 0 20 20"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <rect
+                                                    width="20"
+                                                    height="20"
+                                                    rx="10"
+                                                    fill=""
+                                                    className="fill-primary"
+                                                />
+                                                <path
+                                                    d="M9.31661 13.7561L14.7491 8.42144C15.0836 8.0959 15.0836 7.5697 14.7491 7.24416C14.4145 6.91861 13.8736 6.91861 13.539 7.24416L8.7116 11.9901L6.46096 9.78807C6.12636 9.46253 5.58554 9.46253 5.25095 9.78807C4.91635 10.1136 4.91635 10.6398 5.25095 10.9654L8.1066 13.7561C8.27347 13.9184 8.49253 14 8.7116 14C8.93067 14 9.14974 13.9184 9.31661 13.7561Z"
+                                                    fill=""
+                                                    className="fill-paragraph"
+                                                />
+                                            </svg>
+
+                                            <span>Real-Time Tracking</span>
+                                        </li>
+                                        <li className="mb-6 flex items-center gap-3.5">
+                                            <svg
+                                                width="20"
+                                                height="20"
+                                                viewBox="0 0 20 20"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <rect
+                                                    width="20"
+                                                    height="20"
+                                                    rx="10"
+                                                    fill=""
+                                                    className="fill-primary"
+                                                />
+                                                <path
+                                                    d="M9.31661 13.7561L14.7491 8.42144C15.0836 8.0959 15.0836 7.5697 14.7491 7.24416C14.4145 6.91861 13.8736 6.91861 13.539 7.24416L8.7116 11.9901L6.46096 9.78807C6.12636 9.46253 5.58554 9.46253 5.25095 9.78807C4.91635 10.1136 4.91635 10.6398 5.25095 10.9654L8.1066 13.7561C8.27347 13.9184 8.49253 14 8.7116 14C8.93067 14 9.14974 13.9184 9.31661 13.7561Z"
+                                                    fill=""
+                                                    className="fill-paragraph"
+                                                />
+                                            </svg>
+                                            <span>Easy Booking</span>
+                                        </li>
+                                        <li className="mb-6 flex items-center gap-3.5">
+                                            <svg
+                                                width="20"
+                                                height="20"
+                                                viewBox="0 0 20 20"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <rect
+                                                    width="20"
+                                                    height="20"
+                                                    rx="10"
+                                                    fill=""
+                                                    className="fill-primary"
+                                                />
+                                                <path
+                                                    d="M9.31661 13.7561L14.7491 8.42144C15.0836 8.0959 15.0836 7.5697 14.7491 7.24416C14.4145 6.91861 13.8736 6.91861 13.539 7.24416L8.7116 11.9901L6.46096 9.78807C6.12636 9.46253 5.58554 9.46253 5.25095 9.78807C4.91635 10.1136 4.91635 10.6398 5.25095 10.9654L8.1066 13.7561C8.27347 13.9184 8.49253 14 8.7116 14C8.93067 14 9.14974 13.9184 9.31661 13.7561Z"
+                                                    fill=""
+                                                    className="fill-paragraph"
+                                                />
+                                            </svg>
+                                            <span>Payment Integration</span>
+                                        </li>
+                                        <li className="mb-6 flex items-center gap-3.5">
+                                            <svg
+                                                width="20"
+                                                height="20"
+                                                viewBox="0 0 20 20"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <rect
+                                                    width="20"
+                                                    height="20"
+                                                    rx="10"
+                                                    fill=""
+                                                    className="fill-primary"
+                                                />
+                                                <path
+                                                    d="M9.31661 13.7561L14.7491 8.42144C15.0836 8.0959 15.0836 7.5697 14.7491 7.24416C14.4145 6.91861 13.8736 6.91861 13.539 7.24416L8.7116 11.9901L6.46096 9.78807C6.12636 9.46253 5.58554 9.46253 5.25095 9.78807C4.91635 10.1136 4.91635 10.6398 5.25095 10.9654L8.1066 13.7561C8.27347 13.9184 8.49253 14 8.7116 14C8.93067 14 9.14974 13.9184 9.31661 13.7561Z"
+                                                    fill=""
+                                                    className="fill-paragraph"
+                                                />
+                                            </svg>
+                                            <span>Insights & Analytics</span>
+                                        </li>
+                                    </ul>
+
+                                    <a
+                                        href="contact.html"
+                                        className="btn-outline dark:bg-transparent text-center py-3 w-full"
+                                    >
+                                        Start Free Trial
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="bg-white dark:bg-dark-200 shadow-box rounded-medium p-2.5 ">
+                                <div
+                                    className="border border-dashed rounded border-gray-100 dark:border-borderColour-dark p-8 max-md:p-5 lg:px-8 lg:pt-3 lg:pb-15  "
+                                >
+                                    <div className="flex justify-end mb-2.5">
+                                        <span className=" -mr-4 bg-primary text-paragraph py-1.5 px-3 rounded-full font-medium"> Save 40% </span>
+                                    </div>
+                                    <h3 className="mb-2">Standard</h3>
+                                    <p className="mb-6">
+                                        Take your courier and transport management to the next level with Peleka’s Standard Plan.
+                                    </p>
+                                    <div className="price-month mb-16">
+                                        <h2>$<span>32.00</span></h2>
+                                        <p>Per Month</p>
+                                    </div>
+
+                                    <ul
+                                        className=" relative after:absolute after:-top-12 after:h-0.5 after:w-full after:bg-[url('https://aplio.vercel.app/images/banking/border.svg')] after:bg-center after:bg-no-repeat after:bg-full"
+                                    >
+                                        <li className="mb-6 flex items-center gap-3.5">
+                                            <svg
+                                                width="20"
+                                                height="20"
+                                                viewBox="0 0 20 20"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <rect
+                                                    width="20"
+                                                    height="20"
+                                                    rx="10"
+                                                    fill=""
+                                                    className="fill-primary"
+                                                />
+                                                <path
+                                                    d="M9.31661 13.7561L14.7491 8.42144C15.0836 8.0959 15.0836 7.5697 14.7491 7.24416C14.4145 6.91861 13.8736 6.91861 13.539 7.24416L8.7116 11.9901L6.46096 9.78807C6.12636 9.46253 5.58554 9.46253 5.25095 9.78807C4.91635 10.1136 4.91635 10.6398 5.25095 10.9654L8.1066 13.7561C8.27347 13.9184 8.49253 14 8.7116 14C8.93067 14 9.14974 13.9184 9.31661 13.7561Z"
+                                                    fill=""
+                                                    className="fill-paragraph"
+                                                />
+                                            </svg>
+                                            <span>Comprehensive Delivery Tracking</span>
+                                        </li>
+                                        <li className="mb-6 flex items-center gap-3.5">
+                                            <svg
+                                                width="20"
+                                                height="20"
+                                                viewBox="0 0 20 20"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <rect
+                                                    width="20"
+                                                    height="20"
+                                                    rx="10"
+                                                    fill=""
+                                                    className="fill-primary"
+                                                />
+                                                <path
+                                                    d="M9.31661 13.7561L14.7491 8.42144C15.0836 8.0959 15.0836 7.5697 14.7491 7.24416C14.4145 6.91861 13.8736 6.91861 13.539 7.24416L8.7116 11.9901L6.46096 9.78807C6.12636 9.46253 5.58554 9.46253 5.25095 9.78807C4.91635 10.1136 4.91635 10.6398 5.25095 10.9654L8.1066 13.7561C8.27347 13.9184 8.49253 14 8.7116 14C8.93067 14 9.14974 13.9184 9.31661 13.7561Z"
+                                                    fill=""
+                                                    className="fill-paragraph"
+                                                />
+                                            </svg>
+                                            <span>Custom Invoices & Quotes</span>
+                                        </li>
+                                        <li className="mb-6 flex items-center gap-3.5">
+                                            <svg
+                                                width="20"
+                                                height="20"
+                                                viewBox="0 0 20 20"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <rect
+                                                    width="20"
+                                                    height="20"
+                                                    rx="10"
+                                                    fill=""
+                                                    className="fill-primary"
+                                                />
+                                                <path
+                                                    d="M9.31661 13.7561L14.7491 8.42144C15.0836 8.0959 15.0836 7.5697 14.7491 7.24416C14.4145 6.91861 13.8736 6.91861 13.539 7.24416L8.7116 11.9901L6.46096 9.78807C6.12636 9.46253 5.58554 9.46253 5.25095 9.78807C4.91635 10.1136 4.91635 10.6398 5.25095 10.9654L8.1066 13.7561C8.27347 13.9184 8.49253 14 8.7116 14C8.93067 14 9.14974 13.9184 9.31661 13.7561Z"
+                                                    fill=""
+                                                    className="fill-paragraph"
+                                                />
+                                            </svg>
+                                            <span>Integrated Payment Solutions</span>
+                                        </li>
+                                        <li className="mb-6 flex items-center gap-3.5">
+                                            <svg
+                                                width="20"
+                                                height="20"
+                                                viewBox="0 0 20 20"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <rect
+                                                    width="20"
+                                                    height="20"
+                                                    rx="10"
+                                                    fill=""
+                                                    className="fill-primary"
+                                                />
+                                                <path
+                                                    d="M9.31661 13.7561L14.7491 8.42144C15.0836 8.0959 15.0836 7.5697 14.7491 7.24416C14.4145 6.91861 13.8736 6.91861 13.539 7.24416L8.7116 11.9901L6.46096 9.78807C6.12636 9.46253 5.58554 9.46253 5.25095 9.78807C4.91635 10.1136 4.91635 10.6398 5.25095 10.9654L8.1066 13.7561C8.27347 13.9184 8.49253 14 8.7116 14C8.93067 14 9.14974 13.9184 9.31661 13.7561Z"
+                                                    fill=""
+                                                    className="fill-paragraph"
+                                                />
+                                            </svg>
+                                            <span>In-Depth Insights & Reports</span>
+                                        </li>
+                                    </ul>
+
+                                    <a
+                                        href="contact.html"
+                                        className="btn  text-center py-3 w-full "
+                                    >
+                                        Get Started Now
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="bg-white dark:bg-dark-200 shadow-box rounded-medium p-2.5 ">
+                                <div className="border border-dashed rounded border-gray-100 dark:border-borderColour-dark p-8 max-md:p-5">
+                                    <h3 className="mb-2">Premium</h3>
+                                    <p className="mb-6">
+                                        Unlock the full potential of your courier and transport operations with Peleka’s Premium Plan.
+                                    </p>
+                                    <div className="price-month mb-16">
+                                        <h2>$<span>48.00</span></h2>
+                                        <p>Per Month</p>
+                                    </div>
+                                    <ul
+                                        className=" relative after:absolute after:-top-12 after:h-0.5 after:w-full after:bg-[url('https://aplio.vercel.app/images/banking/border.svg')]  after:bg-center after:bg-no-repeat after:bg-full"
+                                    >
+                                        <li className="mb-6 flex items-center gap-3.5">
+                                            <svg
+                                                width="20"
+                                                height="20"
+                                                viewBox="0 0 20 20"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <rect
+                                                    width="20"
+                                                    height="20"
+                                                    rx="10"
+                                                    fill=""
+                                                    className="fill-primary"
+                                                />
+                                                <path
+                                                    d="M9.31661 13.7561L14.7491 8.42144C15.0836 8.0959 15.0836 7.5697 14.7491 7.24416C14.4145 6.91861 13.8736 6.91861 13.539 7.24416L8.7116 11.9901L6.46096 9.78807C6.12636 9.46253 5.58554 9.46253 5.25095 9.78807C4.91635 10.1136 4.91635 10.6398 5.25095 10.9654L8.1066 13.7561C8.27347 13.9184 8.49253 14 8.7116 14C8.93067 14 9.14974 13.9184 9.31661 13.7561Z"
+                                                    fill=""
+                                                    className="fill-paragraph"
+                                                />
+                                            </svg>
+                                            <span>Advanced Delivery Analytics</span>
+                                        </li>
+                                        <li className="mb-6 flex items-center gap-3.5">
+                                            <svg
+                                                width="20"
+                                                height="20"
+                                                viewBox="0 0 20 20"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <rect
+                                                    width="20"
+                                                    height="20"
+                                                    rx="10"
+                                                    fill=""
+                                                    className="fill-primary"
+                                                />
+                                                <path
+                                                    d="M9.31661 13.7561L14.7491 8.42144C15.0836 8.0959 15.0836 7.5697 14.7491 7.24416C14.4145 6.91861 13.8736 6.91861 13.539 7.24416L8.7116 11.9901L6.46096 9.78807C6.12636 9.46253 5.58554 9.46253 5.25095 9.78807C4.91635 10.1136 4.91635 10.6398 5.25095 10.9654L8.1066 13.7561C8.27347 13.9184 8.49253 14 8.7116 14C8.93067 14 9.14974 13.9184 9.31661 13.7561Z"
+                                                    fill=""
+                                                    className="fill-paragraph"
+                                                />
+                                            </svg>
+                                            <span>Priority Customer Support</span>
+                                        </li>
+                                        <li className="mb-6 flex items-center gap-3.5">
+                                            <svg
+                                                width="20"
+                                                height="20"
+                                                viewBox="0 0 20 20"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <rect
+                                                    width="20"
+                                                    height="20"
+                                                    rx="10"
+                                                    fill=""
+                                                    className="fill-primary"
+                                                />
+                                                <path
+                                                    d="M9.31661 13.7561L14.7491 8.42144C15.0836 8.0959 15.0836 7.5697 14.7491 7.24416C14.4145 6.91861 13.8736 6.91861 13.539 7.24416L8.7116 11.9901L6.46096 9.78807C6.12636 9.46253 5.58554 9.46253 5.25095 9.78807C4.91635 10.1136 4.91635 10.6398 5.25095 10.9654L8.1066 13.7561C8.27347 13.9184 8.49253 14 8.7116 14C8.93067 14 9.14974 13.9184 9.31661 13.7561Z"
+                                                    fill=""
+                                                    className="fill-paragraph"
+                                                />
+                                            </svg>
+                                            <span>Custom Branding Options</span>
+                                        </li>
+                                        <li className="mb-6 flex items-center gap-3.5">
+                                            <svg
+                                                width="20"
+                                                height="20"
+                                                viewBox="0 0 20 20"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <rect
+                                                    width="20"
+                                                    height="20"
+                                                    rx="10"
+                                                    fill=""
+                                                    className="fill-primary"
+                                                />
+                                                <path
+                                                    d="M9.31661 13.7561L14.7491 8.42144C15.0836 8.0959 15.0836 7.5697 14.7491 7.24416C14.4145 6.91861 13.8736 6.91861 13.539 7.24416L8.7116 11.9901L6.46096 9.78807C6.12636 9.46253 5.58554 9.46253 5.25095 9.78807C4.91635 10.1136 4.91635 10.6398 5.25095 10.9654L8.1066 13.7561C8.27347 13.9184 8.49253 14 8.7116 14C8.93067 14 9.14974 13.9184 9.31661 13.7561Z"
+                                                    fill=""
+                                                    className="fill-paragraph"
+                                                />
+                                            </svg>
+                                            <span>Multi-User Access</span>
+                                        </li>
+                                    </ul>
+
+                                    <a
+                                        href="contact.html"
+                                        className="btn-outline dark:bg-transparent text-center py-3 w-full"
+                                    >
+                                        Get Started Now
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </>
     )
 }
