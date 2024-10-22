@@ -1,5 +1,6 @@
 import React from 'react'
 import { LogoLight } from '../assets/img'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
     return (
@@ -9,7 +10,7 @@ const Navbar = () => {
         >
             <nav className="container flex relative items-center">
                 <div className="nav-logo">
-                    <a href="/">
+                    <Link to="/">
                         <img
                             src={LogoLight}
                             alt="logo"
@@ -21,44 +22,44 @@ const Navbar = () => {
                             alt="logo dark version"
                             className="hidden dark:inline-block"
                         />
-                    </a>
+                    </Link>
                 </div>
                 <ul className="nav-list hidden lg:flex lg:ml-7 xl:ml-15  [&>*:not(:last-child)]:me-1">
                     <li>
-                        <a
-                            href="/"
+                        <Link
+                            to="/"
                             className="font-Inter flex items-center text-base font-medium leading-8 text-paragraph dark:text-white py-[5px] px-5 lg:px-4 xl:px-5 border rounded-large border-transparent hover:bg-white hover:border-borderColour dark:hover:bg-dark-200 
                             dark:hover:border-borderColour/10 duration-500 hover:duration-500 transition-colors "
                         >
                             Home
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a
-                            href="/about"
+                        <Link
+                            to="/about"
                             className="font-Inter flex items-center text-base font-medium leading-8 text-paragraph dark:text-white py-[5px] px-5 lg:px-4 xl:px-5 border rounded-large border-transparent hover:bg-white hover:border-borderColour dark:hover:bg-dark-200 
                             dark:hover:border-borderColour/10 duration-500 hover:duration-500 transition-colors "
                         >
                             About
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a
-                            href="/services"
+                        <Link
+                            to="/services"
                             className="font-Inter flex items-center text-base font-medium leading-8 text-paragraph dark:text-white py-[5px] px-5 lg:px-4 xl:px-5 border rounded-large border-transparent hover:bg-white hover:border-borderColour dark:hover:bg-dark-200 
                             dark:hover:border-borderColour/10 duration-500 hover:duration-500 transition-colors "
                         >
                             Services
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a
-                            href="/contact"
+                        <Link
+                            to="/contact"
                             className="font-Inter flex items-center text-base font-medium leading-8 text-paragraph dark:text-white py-[5px] px-5 lg:px-4 xl:px-5 border rounded-large border-transparent hover:bg-white hover:border-borderColour dark:hover:bg-dark-200 
                             dark:hover:border-borderColour/10 duration-500 hover:duration-500 transition-colors  "
                         >
                             Contact Us
-                        </a>
+                        </Link>
                     </li>
                 </ul>
                 <ul className="flex items-center ml-auto  [&>*:not(:last-child)]:me-2.5">
@@ -85,12 +86,12 @@ const Navbar = () => {
                         </button>
                     </li>
                     <li className="max-lg:hidden">
-                        <a
-                            href="request-demo"
+                        <Link
+                            to="request-demo"
                             className="btn btn-navbar btn-sm"
                         >
                             Request Demo
-                        </a>
+                        </Link>
                     </li>
                     <li className="max-lg:inline-block lg:hidden ">
                         <button className="outline-none mobile-menu-button w-10 h-10 rounded-full bg-white dark:bg-dark-200 relative ">
@@ -129,47 +130,47 @@ const Navbar = () => {
                     </button>
                     <ul className="nav-list flex flex-col gap-5 w-full max-w-[500px] landscape:h-full">
                         <li>
-                            <a
-                                href="/"
+                            <Link
+                                to="/"
                                 className="font-Inter flex items-center text-base font-medium leading-8 text-paragraph dark:text-white py-[5px] px-5 lg:px-4 xl:px-5 border rounded-large border-transparent hover:bg-white hover:border-borderColour dark:hover:bg-dark-200 
                                 dark:hover:border-borderColour/10 duration-500 hover:duration-500 transition-colors "
                             >
                                 Home
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a
-                                href="/about"
+                            <Link
+                                to="/about"
                                 className="font-Inter flex items-center text-base font-medium leading-8 text-paragraph dark:text-white py-[5px] px-5 lg:px-4 xl:px-5 border rounded-large border-transparent hover:bg-white hover:border-borderColour dark:hover:bg-dark-200 
                                 dark:hover:border-borderColour/10 duration-500 hover:duration-500 transition-colors "
                             >
                                 About
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a
-                                href="/services"
+                            <Link
+                                to="/services"
                                 className="font-Inter flex items-center text-base font-medium leading-8 text-paragraph dark:text-white py-[5px] px-5 lg:px-4 xl:px-5 border rounded-large border-transparent hover:bg-white hover:border-borderColour dark:hover:bg-dark-200 
                                 dark:hover:border-borderColour/10 duration-500 hover:duration-500 transition-colors "
                             >
                                 Services
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a
-                                href="/contact" className="font-Inter flex items-center text-base font-medium leading-8 text-paragraph dark:text-white py-[5px] px-5 lg:px-4 xl:px-5 border rounded-large border-transparent hover:bg-white hover:border-borderColour dark:hover:bg-dark-200 dark:hover:border-borderColour/10 duration-500 hover:duration-500 transition-colors"
+                            <Link
+                                to="/contact" className="font-Inter flex items-center text-base font-medium leading-8 text-paragraph dark:text-white py-[5px] px-5 lg:px-4 xl:px-5 border rounded-large border-transparent hover:bg-white hover:border-borderColour dark:hover:bg-dark-200 dark:hover:border-borderColour/10 duration-500 hover:duration-500 transition-colors"
                             >
                                 Contact Us
-                            </a>
+                            </Link>
                         </li>
 
                         <li>
-                            <a
-                                href="/request-demo"
+                            <Link
+                                to="/request-demo"
                                 className="btn btn-navbar btn-sm"
                             >
                                 Request Demo
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </div>
