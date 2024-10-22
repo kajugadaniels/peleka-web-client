@@ -1,13 +1,8 @@
-import React, { useEffect } from 'react'
-import AOS from 'aos'
-import 'aos/dist/aos.css'
+import React from 'react'
 import { Hero } from '../components'
 import { Link } from 'react-router-dom'
 
 const Home = () => {
-    useEffect(() => {
-        AOS.init(); // Initialize AOS
-    }, []);
 
     const clientLogos = [
         {
