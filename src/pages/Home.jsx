@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { Hero } from '../components'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
     useEffect(() => {
@@ -391,12 +392,12 @@ const Home = () => {
                                         </li>
                                     </ul>
 
-                                    <a
-                                        href="contact.html"
+                                    <Link
+                                        to="/"
                                         className="btn-outline dark:bg-transparent text-center py-3 w-full"
                                     >
                                         Start Free Trial
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                             <div className="bg-white dark:bg-dark-200 shadow-box rounded-medium p-2.5 ">
@@ -512,12 +513,12 @@ const Home = () => {
                                         </li>
                                     </ul>
 
-                                    <a
-                                        href="contact.html"
+                                    <Link
+                                        to="/"
                                         className="btn  text-center py-3 w-full "
                                     >
                                         Get Started Now
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                             <div className="bg-white dark:bg-dark-200 shadow-box rounded-medium p-2.5 ">
@@ -628,7 +629,7 @@ const Home = () => {
                                     </ul>
 
                                     <a
-                                        href="contact.html"
+                                        to="/"
                                         className="btn-outline dark:bg-transparent text-center py-3 w-full"
                                     >
                                         Get Started Now
@@ -689,6 +690,103 @@ const Home = () => {
                         animation: marquee 25s linear infinite;
                     }
                 `}</style>
+            </section>
+
+            <section className="relative pt-150 max-md:pt-25 pb-20 max-md:pb-25 max-md:overflow-hidden">
+                <div className="container relative ">
+                    <div className="absolute left-1/2 -bottom-[442px] -translate-x-1/2  flex max-md:flex-col -z-10 max-md:hidden">
+                        <div
+                            className="max-1xl:w-[335px] max-1xl:h-[335px]  1xl:w-[442px] 1xl:h-[442px]  rounded-full bg-primary-200/20 blur-[145px]"
+                        ></div>
+                        <div
+                            className="max-1xl:w-[335px] max-1xl:h-[335px]  1xl:w-[442px] 1xl:h-[442px]  rounded-full bg-primary-200/25 -ml-[170px] max-md:ml-0 blur-[145px]"
+                        ></div>
+                        <div
+                            className="max-1xl:w-[335px] max-1xl:h-[335px]  1xl:w-[442px] 1xl:h-[442px]  rounded-full bg-primary-200/20 -ml-[170px] max-md:ml-0 blur-[145px]"
+                        ></div>
+                    </div>
+                    <div
+                        className="absolute left-1/2 -bottom-[350px] p-[350px] -translate-x-1/2 bg-contain w-full h-full  bg-[url('https://aplio.vercel.app/images/hero-gradient.png')] bg-no-repeat bg-center opacity-70 md:hidden -z-10"
+                    ></div>
+                    <div className=" text-center mx-auto">
+                        <h2 className="mb-5 max-lg:text-[32px] text-[48px] font-semibold ">
+                            Connect with Your <br /> Clients Effortlessly
+                        </h2>
+                        <p className="max-lg:mt-6 mb-12 max-w-[400px] mx-auto">
+                            Choose Peleka for a unique delivery experience that prioritizes your business needs. Our innovative solutions ensure that your products reach your clients swiftly and safely. With Peleka, you’ll have more time to focus on what you do best—growing your business. Join us today!
+                        </p>
+                        <Link
+                            to="/"
+                            className="btn"
+                        >
+                            Get Started Today
+                        </Link>
+                        <ul
+                            className=" flex max-lg:flex-col max-lg:gap-5  items-center justify-between max-lg:mt-5 mt-20 max-w-[815px] mx-auto"
+                        >
+                            <li className="flex items-center">
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 20 20"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="mr-3"
+                                >
+                                    <path
+                                        d="M14.125 7.75L8.62497 13L5.875 10.375M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
+                                        stroke=""
+                                        className="stroke-paragraph dark:stroke-primary"
+                                        stroke-width="1.5"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                </svg>
+                                <p>No Hidden Fees.</p>
+                            </li>
+                            <li className="flex items-center">
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 20 20"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="mr-3"
+                                >
+                                    <path
+                                        d="M14.125 7.75L8.62497 13L5.875 10.375M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
+                                        stroke=""
+                                        className="stroke-paragraph dark:stroke-primary"
+                                        stroke-width="1.5"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                </svg>
+                                <p>Satisfaction Guaranteed.</p>
+                            </li>
+                            <li className="flex items-center">
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 20 20"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="mr-3"
+                                >
+                                    <path
+                                        d="M14.125 7.75L8.62497 13L5.875 10.375M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
+                                        stroke=""
+                                        className="stroke-paragraph dark:stroke-primary"
+                                        stroke-width="1.5"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                </svg>
+                                <p>Priority Support.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </section>
         </>
     )
