@@ -509,7 +509,7 @@ video {
 }:is(:where(.dark) .btn)::before{
   content: var(--tw-content);
   --tw-bg-opacity: 1;
-  background-color: rgb(196 242 65 / var(--tw-bg-opacity));
+  background-color: rgb(9 16 87 / var(--tw-bg-opacity));
 }:is(:where(.dark) .btn)::after{
   content: var(--tw-content);
   --tw-bg-opacity: 1;
@@ -1500,7 +1500,7 @@ video {
 }.border-b-borderColour{
   --tw-border-opacity: 1;
   border-bottom-color: rgb(237 240 230 / var(--tw-border-opacity));
-}.bg-\[\#219653\]{
+}.bg-\[\#03346E\]{
   --tw-bg-opacity: 1;
   background-color: rgb(33 150 83 / var(--tw-bg-opacity));
 }.bg-\[\#D9D9D900\]{
@@ -1526,15 +1526,15 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(243 248 232 / var(--tw-bg-opacity));
 }.bg-primary-200\/20{
-  background-color: rgb(196 242 65 / 0.2);
+  background-color: rgb(9 16 87 / 0.2);
 }.bg-primary-200\/25{
-  background-color: rgb(196 242 65 / 0.25);
+  background-color: rgb(9 16 87 / 0.25);
 }.bg-primary-200\/30{
-  background-color: rgb(196 242 65 / 0.3);
+  background-color: rgb(9 16 87 / 0.3);
 }.bg-primary-200\/40{
-  background-color: rgb(196 242 65 / 0.4);
+  background-color: rgb(9 16 87 / 0.4);
 }.bg-primary-200\/50{
-  background-color: rgb(196 242 65 / 0.5);
+  background-color: rgb(9 16 87 / 0.5);
 }.bg-primary\/10{
   background-color: rgb(2 76 170 / 0.1);
 }.bg-primary\/50{
@@ -1597,8 +1597,8 @@ video {
   background-position: center;
 }.bg-no-repeat{
   background-repeat: no-repeat;
-}.fill-\[\#219653\]{
-  fill: #219653;
+}.fill-\[\#03346E\]{
+  fill: #03346E;
 }.fill-\[\#D8DBD0\]{
   fill: #D8DBD0;
 }.fill-\[\#E6FFB1\]{
@@ -1612,7 +1612,7 @@ video {
 }.fill-primary{
   fill: #024CAA;
 }.fill-primary-200{
-  fill: #C4F241;
+  fill: #091057;
 }.fill-transparent{
   fill: transparent;
 }.fill-white{
@@ -2879,7 +2879,7 @@ body{overflow-x:hidden;max-width:100vw}html{
 }
 .after\:bg-primary-200\/30::after{
   content: var(--tw-content);
-  background-color: rgb(196 242 65 / 0.3);
+  background-color: rgb(9 16 87 / 0.3);
 }
 .after\:bg-\[url\(\'\.\.\/images\/banking\/border\.svg\'\)\]::after{
   content: var(--tw-content);
@@ -4083,10 +4083,10 @@ body{overflow-x:hidden;max-width:100vw}html{
   background-color: rgb(25 26 23 / var(--tw-bg-opacity));
 }
 :is(:where(.dark) .dark\:bg-primary-200\/10){
-  background-color: rgb(196 242 65 / 0.1);
+  background-color: rgb(9 16 87 / 0.1);
 }
 :is(:where(.dark) .dark\:bg-primary-200\/20){
-  background-color: rgb(196 242 65 / 0.2);
+  background-color: rgb(9 16 87 / 0.2);
 }
 :is(:where(.dark) .dark\:bg-primary\/5){
   background-color: rgb(2 76 170 / 0.05);
@@ -4119,7 +4119,7 @@ body{overflow-x:hidden;max-width:100vw}html{
   fill: #024CAA;
 }
 :is(:where(.dark) .dark\:fill-primary-200){
-  fill: #C4F241;
+  fill: #091057;
 }
 :is(:where(.dark) .dark\:fill-white){
   fill: #fff;
@@ -4206,7 +4206,7 @@ body{overflow-x:hidden;max-width:100vw}html{
 :is(:where(.dark) .dark\:before\:bg-primary-200)::before{
   content: var(--tw-content);
   --tw-bg-opacity: 1;
-  background-color: rgb(196 242 65 / var(--tw-bg-opacity));
+  background-color: rgb(9 16 87 / var(--tw-bg-opacity));
 }
 :is(:where(.dark) .dark\:before\:bg-white)::before{
   content: var(--tw-content);
