@@ -1,5 +1,6 @@
 import React from 'react'
 import { HeroDevice } from '../assets/img'
+import { Link } from 'react-router-dom'
 
 const Hero = () => {
     return (
@@ -21,18 +22,18 @@ const Hero = () => {
                             With Peleka, your packages and personal transport needs are just a tap away. Experience swift services across Kigali, powered by motorbikes.
                         </p>
                         <div className="flex items-center gap-4">
-                            <a
-                                href="/contact"
+                            <Link
+                                to="/contact"
                                 className="btn"
                             >
                                 Get Started
-                            </a>
-                            <a
-                                href="/request-demo"
+                            </Link>
+                            <Link
+                                to="/request-demo"
                                 className="btn-outline"
                             >
                                 Get a Demo
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     <div

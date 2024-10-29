@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Contact = () => {
     return (
@@ -93,7 +94,7 @@ const Contact = () => {
                                         />
                                     </svg>
                                     <h3 className="mb-2.5">Email Us</h3>
-                                    <a href="mailto:info@peleka.com"> info@peleka.com </a>
+                                    <Link to="mailto:info@peleka.com"> info@peleka.com </Link>
                                 </div>
                             </div>
 
@@ -134,7 +135,7 @@ const Contact = () => {
                                         />
                                     </svg>
                                     <h3 className="mb-2.5">Call Us</h3>
-                                    <a href="tel:+250788888888">+250 788 888 888</a>
+                                    <Link to="tel:+250788888888">+250 788 888 888</Link>
                                 </div>
                             </div>
                         </div>

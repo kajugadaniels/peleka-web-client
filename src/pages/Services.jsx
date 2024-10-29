@@ -57,12 +57,12 @@ const Services = () => {
                                         alt="image"
                                         class="inline-block dark:hidden mb-6"
                                     />
-                                    <a
-                                        href="#"
+                                    <Link
+                                        to="#"
                                         class="block"
                                     >
                                         <h3 class="mb-2.5">Fast and Reliable Deliveries</h3>
-                                    </a>
+                                    </Link>
                                     <p class="mb-6">
                                         Our motorbike couriers ensure your packages are delivered swiftly and securely across Kigali. From small parcels to larger goods, we handle all deliveries with care and precision, allowing your business to thrive.
                                     </p>
@@ -80,12 +80,12 @@ const Services = () => {
                                         alt="image"
                                         class="inline-block dark:hidden mb-6"
                                     />
-                                    <a
-                                        href="#"
+                                    <Link
+                                        to="#"
                                         class="block"
                                     >
                                         <h3 class="mb-2.5">Business-to-Customer Logistics</h3>
-                                    </a>
+                                    </Link>
                                     <p class="mb-6">
                                         Whether you're a restaurant, retail shop, or local entrepreneur, Peleka makes it easy to get your products to your clients. Focus on your core business while we manage the logistics, ensuring timely and efficient deliveries every time.
                                     </p>
@@ -103,14 +103,14 @@ const Services = () => {
                                         alt="image"
                                         class="inline-block dark:hidden mb-6"
                                     />
-                                    <a
-                                        href="#"
+                                    <Link
+                                        to="#"
                                         class="block"
                                     >
                                         <h3 class="mb-2.5">
                                             On-Demand Transport Services
                                         </h3>
-                                    </a>
+                                    </Link>
                                     <p class="mb-6">
                                         Need a quick and reliable way to get from point A to B? Peleka’s on-demand transport service connects you with motorbike riders ready to provide a smooth and hassle-free ride within Kigali, perfect for both personal and business needs.
                                     </p>
