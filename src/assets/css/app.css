@@ -1547,13 +1547,13 @@ video {
 }.bg-\[linear-gradient\(180deg\2c var\(--tw-gradient-stops\)\)\]{
   background-image: linear-gradient(180deg,var(--tw-gradient-stops));
 }.bg-\[url\(\'\.\.\/images\/core-gradient\.png\'\)\]{
-  background-image: url('../images/core-gradient.png');
+  background-image: url('https://aplio.vercel.app/images/core-gradient.png');
 }.bg-\[url\(\'\.\.\/images\/hero-gradient\.png\'\)\]{
-  background-image: url('../images/hero-gradient.png');
+  background-image: url('https://aplio.vercel.app/images/hero-gradient.png');
 }.bg-\[url\(\'\.\.\/images\/price-gradient\.png\'\)\]{
-  background-image: url('../images/price-gradient.png');
+  background-image: url('https://aplio.vercel.app/images/price-gradient.png');
 }.bg-\[url\(\'\.\.\/images\/service-bg\.png\'\)\]{
-  background-image: url('../images/service-bg.png');
+  background-image: url('https://aplio.vercel.app/images/service-bg.png');
 }.bg-gradient-to-b{
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }.from-\[\#F3FDD9\]{
