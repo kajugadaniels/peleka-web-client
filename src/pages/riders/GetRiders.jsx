@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { fetchRiders } from '../../api'
+import { getRiders } from '../../api'
 import { toast } from 'react-toastify'
 
 const GetRiders = () => {
@@ -13,7 +13,7 @@ const GetRiders = () => {
         const loadRiders = async () => {
             setLoading(true);
             try {
-                const data = await fetchRiders();
+                const data = await getRiders();
                 setRiders(data);
                 setFilteredRiders(data);
             } catch (error) {

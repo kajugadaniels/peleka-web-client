@@ -12,33 +12,26 @@ const api = axios.create({
     },
 });
 
-export const fetchRiders = async () => {
+export const getRiders = async () => {
     try {
-        const response = await api.get('/riders/', {
-            headers: {
-                Authorization: `Token ${localStorage.getItem('token')}`,
-            },
-        });
+        // Use the public endpoint and remove Authorization header
+        const response = await api.get('/riders/');
         return response.data;
     } catch (error) {
+        console.error('Error fetching riders:', error);
         throw error.response 
             ? error.response.data 
             : new Error('An error occurred while fetching riders.');
     }
 };
 
-export const fetchRiderById = async (id) => {
+export const getRiderById = async (id) => {
     try {
-        const response = await api.get(`/riders/${id}/`, {
-            headers: {
-                Authorization: `Token ${localStorage.getItem('token')}`,
-            },
-        });
+        // Use the public endpoint and remove Authorization header
+        const response = await api.get(`/riders/${id}/`);
         return response.data;
     } catch (error) {
-        // Log the error for debugging
         console.error('Error fetching rider by ID:', error);
-
         throw error.response && error.response.data
             ? error.response.data
             : new Error('An error occurred while fetching rider details.');

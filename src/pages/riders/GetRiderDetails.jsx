@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import { fetchRiderById } from '../../api';
+import { getRiderById } from '../../api';
 import { toast } from 'react-toastify';
 
 const GetRiderDetails = () => {
@@ -19,7 +19,7 @@ const GetRiderDetails = () => {
     useEffect(() => {
         const loadRiderDetails = async () => {
             try {
-                const data = await fetchRiderById(id);
+                const data = await getRiderById(id);
                 setRiderData(data);
             } catch (error) {
                 toast.error('Failed to load rider details.');
