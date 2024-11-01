@@ -26,3 +26,21 @@ export const fetchRiders = async () => {
             : new Error('An error occurred while fetching riders.');
     }
 };
+
+export const fetchRiderById = async (id) => {
+    try {
+        const response = await api.get(`/riders/${id}/`, {
+            headers: {
+                Authorization: `Token ${localStorage.getItem('token')}`,
+            },
+        });
+        return response.data;
+    } catch (error) {
+        // Log the error for debugging
+        console.error('Error fetching rider by ID:', error);
+
+        throw error.response && error.response.data
+            ? error.response.data
+            : new Error('An error occurred while fetching rider details.');
+    }
+};
