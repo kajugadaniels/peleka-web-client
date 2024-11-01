@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import UserLayout from './layouts/UserLayout';
-import { About, Contact, Home, RequestDemo, Services } from './pages'
+import { About, Contact, GetRiders, Home, RequestDemo, Services } from './pages'
 
 const AppRoutes = () => {
     return (
@@ -10,6 +10,7 @@ const AppRoutes = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/services" element={<Services />} />
+                <Route path="/riders" element={<GetRiders />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/request-demo" element={<RequestDemo />} />
             </Route>

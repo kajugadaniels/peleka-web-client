@@ -92,6 +92,14 @@ const Navbar = () => {
                     </li>
                     <li>
                         <Link
+                            to="/riders"
+                            className={getLinkClass('/riders')}
+                        >
+                            Riders
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
                             to="/contact"
                             className={getLinkClass('/contact')}
                         >
