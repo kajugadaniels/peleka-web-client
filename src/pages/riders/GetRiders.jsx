@@ -78,11 +78,11 @@ const GetRiders = () => {
                                             </div>
                                         </div>
                                         <div className="text-center">
-                                            <a href="#">
+                                            <button onClick={() => handleView(rider.id)}>
                                                 <h3 className="mb-2">
                                                     {rider.name}
                                                 </h3>
-                                            </a>
+                                            </button>
                                             <p className="text-sm font-medium leading-[1.5] mb-6">
                                                 #{rider.code}
                                             </p>
