@@ -1,6 +1,34 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import { fetchRiders } from '../../api'
+import { toast } from 'react-toastify'
 
 const GetRiders = () => {
+    const [riders, setRiders] = useState([]);
+    const [filteredRiders, setFilteredRiders] = useState([]);
+    const [searchTerm, setSearchTerm] = useState('');
+    const [currentPage, setCurrentPage] = useState(1);
+    const [ridersPerPage] = useState(10);
+    const [loading, setLoading] = useState(false);
+    const [dropdownOpen, setDropdownOpen] = useState(null);
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        const loadRiders = async () => {
+            setLoading(true);
+            try {
+                const data = await fetchRiders();
+                setRiders(data);
+                setFilteredRiders(data);
+            } catch (error) {
+                toast.error('Failed to load riders.');
+            } finally {
+                setLoading(false);
+            }
+        };
+        loadRiders();
+    }, []);
+
     return (
         <section className="hero  overflow-hidden relative max-lg:pt-150 pt-[240px] pb-[60px] z-40">
             <div className="container">
@@ -20,7 +48,7 @@ const GetRiders = () => {
             </div>
         </section>
 
-        
+
     )
 }
 
