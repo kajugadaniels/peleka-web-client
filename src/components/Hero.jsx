@@ -55,7 +55,7 @@ const Hero = () => {
                             ></div>
                         </div>
                         <div
-                            className="absolute left-1/2 -bottom-150 p-[350px] -translate-x-1/2 bg-contain w-full h-full  bg-[url('../images/hero-gradient.png')] bg-no-repeat bg-center opacity-70 md:hidden -z-10"
+                            className="absolute left-1/2 -bottom-150 p-[350px] -translate-x-1/2 bg-contain w-full h-full  bg-[url('https://aplio.vercel.app/images/hero-gradient.png')] bg-no-repeat bg-center opacity-70 md:hidden -z-10"
                         ></div>
                         <div className="w-full h-full">
                             <div className="relative  ">
