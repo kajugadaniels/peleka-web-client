@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { getRiders } from '../../api'
+import { getRiders, MEDIA_BASE_URL } from '../../api'
 import { toast } from 'react-toastify'
 
 const GetRiders = () => {
@@ -71,7 +71,7 @@ const GetRiders = () => {
                                         <div className="bg-white dark:bg-dark-200 rounded-medium p-2.5 mb-6">
                                             <div className="rounded bg-gray-100 dark:bg-[#30302F] overflow-hidden">
                                                 <img
-                                                    src="https://aplio.vercel.app/images/team/team1.png"
+                                                    src={rider.image ? `${MEDIA_BASE_URL}${rider.image}` : 'https://static.vecteezy.com/system/resources/thumbnails/002/318/271/small/user-profile-icon-free-vector.jpg'}
                                                     alt={rider.name}
                                                     className="grayscale group-hover/image:grayscale-0 duration-300 transition-all"
                                                 />
