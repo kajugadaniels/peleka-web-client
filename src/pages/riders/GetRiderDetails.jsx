@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import { getRiderById } from '../../api';
+import { getRiderById, MEDIA_BASE_URL } from '../../api';
 import { toast } from 'react-toastify';
 
 const GetRiderDetails = () => {
@@ -66,7 +66,7 @@ const GetRiderDetails = () => {
                 >
                     <div class=" rounded bg-gray-100 dark:bg-[#30302F]">
                         <img
-                            src="https://aplio.vercel.app/images/team/teamSingle.png"
+                            src={riderData.image ? `${MEDIA_BASE_URL}${riderData.image}` : 'https://static.vecteezy.com/system/resources/thumbnails/002/318/271/small/user-profile-icon-free-vector.jpg'}
                             alt={riderData.name}
                             class="object-cover object-bottom"
                         />
@@ -82,7 +82,7 @@ const GetRiderDetails = () => {
                         </h1>
                     </div>
                     <div class="mb-12 flex items-center">
-                        <a href="tel:{rider.phone_number}">
+                        <a href="tel:{riderData.phone_number}">
                             {riderData.phone_number}
                         </a>
                     </div>
