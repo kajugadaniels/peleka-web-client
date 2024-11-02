@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import { getRiderById, MEDIA_BASE_URL } from '../../api';
+import { getRiderById } from '../../api';
 import { toast } from 'react-toastify';
 
 const GetRiderDetails = () => {
@@ -66,7 +66,7 @@ const GetRiderDetails = () => {
                 >
                     <div class=" rounded bg-gray-100 dark:bg-[#30302F]">
                         <img
-                            src={riderData.image ? `${MEDIA_BASE_URL}${riderData.image}` : 'https://static.vecteezy.com/system/resources/thumbnails/002/318/271/small/user-profile-icon-free-vector.jpg'}
+                            src={riderData.image}
                             alt={riderData.name}
                             class="object-cover object-bottom"
                         />
