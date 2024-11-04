@@ -111,10 +111,10 @@ const Navbar = () => {
                 <ul className="flex items-center ml-auto [&>*:not(:last-child)]:me-2.5">
                     <li className="max-lg:hidden">
                         <Link
-                            to="/request-demo"
-                            className={`btn btn-navbar btn-sm ${location.pathname === '/request-demo' ? 'active' : ''}`}
+                            to="/login"
+                            className={`btn btn-navbar btn-sm ${location.pathname === '/login' ? 'active' : ''}`}
                         >
-                            Request Demo
+                            Login
                         </Link>
                     </li>
                     <li className="max-lg:inline-block lg:hidden">
@@ -164,6 +164,14 @@ const Navbar = () => {
                                 className={getLinkClass('/contact')}
                             >
                                 Contact Us
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                to="/login"
+                                className={`btn btn-navbar btn-sm ${location.pathname === '/login' ? 'active' : ''}`}
+                            >
+                                Login
                             </Link>
                         </li>
                     </ul>
