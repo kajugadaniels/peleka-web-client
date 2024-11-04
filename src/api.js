@@ -12,6 +12,25 @@ const api = axios.create({
     },
 });
 
+export const login = async (email, password) => {
+    try {
+        const response = await api.post('/auth/login/', { email, password });
+        return {
+            success: true,
+            data: response.data,
+        };
+    } catch (error) {
+        let message = 'An error occurred during login. Please try again.';
+        if (error.response) {
+            message = error.response.data.error || error.response.data.detail || message;
+        }
+        return {
+            success: false,
+            message,
+        };
+    }
+};
+
 export const getRiders = async () => {
     try {
         // Use the public endpoint and remove Authorization header
