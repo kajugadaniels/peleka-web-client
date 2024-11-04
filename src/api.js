@@ -2,8 +2,8 @@ import axios from 'axios';
 
 const API_BASE_URL =
     window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost'
-        ? 'http://127.0.0.1:8000/api/web'
-        : 'https://peleka-api.up.railway.app/api/web';
+        ? 'http://127.0.0.1:8000/api'
+        : 'https://peleka-api.up.railway.app/api';
 
 const api = axios.create({
     baseURL: API_BASE_URL,
@@ -34,7 +34,7 @@ export const login = async (email, password) => {
 export const getRiders = async () => {
     try {
         // Use the public endpoint and remove Authorization header
-        const response = await api.get('/riders/');
+        const response = await api.get('/web/riders/');
         return response.data;
     } catch (error) {
         console.error('Error fetching riders:', error);
@@ -47,7 +47,7 @@ export const getRiders = async () => {
 export const getRiderById = async (id) => {
     try {
         // Use the public endpoint and remove Authorization header
-        const response = await api.get(`/riders/${id}/`);
+        const response = await api.get(`/web/riders/${id}/`);
         return response.data;
     } catch (error) {
         console.error('Error fetching rider by ID:', error);

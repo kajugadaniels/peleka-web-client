@@ -46,24 +46,35 @@ const Login = () => {
 
     const handleLogin = async (e) => {
         e.preventDefault();
-
+    
         if (!validateForm()) return;
-
+    
         setLoading(true);
-
+    
         try {
             const { success, data, message } = await login(email, password);
-
+    
             if (success) {
                 toast.success('Login successful! Redirecting to your dashboard...');
                 localStorage.setItem('token', data.token);
                 localStorage.setItem('user', JSON.stringify(data.user));
-                navigate('/dashboard');
+                navigate('/');
             } else {
                 toast.error(message || 'Login failed. Please check your credentials.');
             }
         } catch (error) {
-            toast.error('An error occurred during login. Please try again.');
+            console.error('Login Error:', error); // Log the entire error object for debugging
+    
+            // Display a detailed error message if available
+            if (error.response) {
+                // If the server provided a detailed error response, display it
+                const errorData = error.response.data;
+                const errorMessage = errorData.message || JSON.stringify(errorData);
+                toast.error(`Error: ${errorMessage}`);
+            } else {
+                // Generic error message for unexpected issues
+                toast.error('An unexpected error occurred during login. Please try again.');
+            }
         } finally {
             setLoading(false);
         }
@@ -99,6 +110,8 @@ const Login = () => {
                                         </label>
                                         <input
                                             type="email"
+                                            name="email"
+                                            id="email"
                                             placeholder="Email address"
                                             className="block w-full text-sm rounded-[48px] border border-borderColour dark:border-borderColour-dark py-3.5 px-5 text-paragraph-light placeholder:text-paragraph-light dark:placeholder:text-paragraph-light outline-none bg-white dark:bg-dark-200 focus:border-primary dark:focus:border-primary duration-300 transition-all"
                                             value={email}
@@ -112,6 +125,8 @@ const Login = () => {
                                         </label>
                                         <input
                                             type="password"
+                                            name="password"
+                                            id="password"
                                             placeholder="At least 8 character"
                                             className="block w-full text-sm rounded-[48px] border border-borderColour dark:border-borderColour-dark py-3.5 px-5 text-paragraph-light placeholder:text-paragraph-light outline-none bg-white dark:bg-dark-200 focus:border-primary dark:focus:border-primary duration-300 transition-all"
                                             value={password}
